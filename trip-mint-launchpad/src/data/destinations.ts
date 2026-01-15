@@ -61,27 +61,27 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "flights",
-    icon: "Plane",
-    title: "Flight Bookings",
-    description: "Search and compare fares from hundreds of airlines to find the best deals for your journey.",
+    id: "flight-change",
+    icon: "RotateCw",
+    title: "Flight Change Assistance",
+    description: "Get expert help to modify your flight bookings and find the best alternatives for your needs.",
   },
   {
-    id: "cruises",
-    icon: "Ship",
-    title: "Cruise Packages",
-    description: "Explore the seas with our curated cruise packages to exotic destinations worldwide.",
+    id: "cancellation-refund",
+    icon: "DollarSign",
+    title: "Flight Cancellation Refund Guidance",
+    description: "Navigate cancellation policies and maximize your refunds with our dedicated support team.",
   },
   {
-    id: "hotels",
-    icon: "Hotel",
-    title: "Hotel Reservations",
-    description: "From budget stays to luxury resorts, find the perfect accommodation for your trip.",
+    id: "urgent-support",
+    icon: "AlertCircle",
+    title: "Urgent Travel Support",
+    description: "24/7 emergency assistance for travel disruptions, delays, and unexpected situations.",
   },
   {
-    id: "packages",
-    icon: "Palmtree",
-    title: "Holiday Packages",
-    description: "Complete vacation packages with flights, hotels, and activities all bundled together.",
+    id: "travel-enquiries",
+    icon: "HelpCircle",
+    title: "Clientele Travel Enquiries",
+    description: "Personalized consultation for all your travel questions and custom trip planning.",
   },
 ];
