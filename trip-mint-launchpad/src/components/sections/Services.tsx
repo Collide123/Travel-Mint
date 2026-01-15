@@ -1,62 +1,87 @@
-import { motion } from "framer-motion";
-import { Plane, Ship, Hotel, Palmtree } from "lucide-react";
-import { services } from "@/data/destinations";
+import baliImg from "@/assets/destinations/bali.jpg";
+import santoriniImg from "@/assets/destinations/santorini.jpg";
+import maldivesImg from "@/assets/destinations/maldives.jpg";
+import swissAlpsImg from "@/assets/destinations/swiss-alps.jpg";
 
-const iconMap: Record<string, React.ReactNode> = {
-  Plane: <Plane className="w-6 h-6" />,
-  Ship: <Ship className="w-6 h-6" />,
-  Hotel: <Hotel className="w-6 h-6" />,
-  Palmtree: <Palmtree className="w-6 h-6" />,
-};
-
-export default function Services() {
-  return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Services
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Everything you need for a perfect trip, all in one place
-          </p>
-        </motion.div>
-
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="group bg-card rounded-xl p-6 h-full card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-1 border border-border/50">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-primary-foreground mb-5 group-hover:scale-110 transition-transform duration-300">
-                  {iconMap[service.icon]}
-                </div>
-
-                {/* Content */}
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+export interface Destination {
+  id: string;
+  name: string;
+  location: string;
+  description: string;
+  duration: string;
+  price: number;
+  image: string;
 }
+
+export const destinations: Destination[] = [
+  {
+    id: "bali",
+    name: "Bali",
+    location: "Indonesia",
+    description: "Tropical paradise with stunning beaches",
+    duration: "7 Days",
+    price: 899,
+    image: baliImg,
+  },
+  {
+    id: "santorini",
+    name: "Santorini",
+    location: "Greece",
+    description: "Iconic white-washed villages and sunsets",
+    duration: "6 Days",
+    price: 1299,
+    image: santoriniImg,
+  },
+  {
+    id: "maldives",
+    name: "Maldives",
+    location: "",
+    description: "Luxury overwater bungalows and crystal waters",
+    duration: "5 Days",
+    price: 1899,
+    image: maldivesImg,
+  },
+  {
+    id: "swiss-alps",
+    name: "Swiss Alps",
+    location: "",
+    description: "Majestic mountains and alpine adventures",
+    duration: "8 Days",
+    price: 2199,
+    image: swissAlpsImg,
+  },
+];
+
+export interface Service {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export const services: Service[] = [
+  {
+    id: "flight-change",
+    icon: "RotateCw",
+    title: "Flight Change Assistance",
+    description: "Get expert help to modify your flight bookings and find the best alternatives for your needs.",
+  },
+  {
+    id: "cancellation-refund",
+    icon: "DollarSign",
+    title: "Flight Cancellation Refund Guidance",
+    description: "Navigate cancellation policies and maximize your refunds with our dedicated support team.",
+  },
+  {
+    id: "urgent-support",
+    icon: "AlertCircle",
+    title: "Urgent Travel Support",
+    description: "24/7 emergency assistance for travel disruptions, delays, and unexpected situations.",
+  },
+  {
+    id: "travel-enquiries",
+    icon: "HelpCircle",
+    title: "Clientele Travel Enquiries",
+    description: "Personalized consultation for all your travel questions and custom trip planning.",
+  },
+];
