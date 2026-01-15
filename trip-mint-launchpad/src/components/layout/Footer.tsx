@@ -38,7 +38,7 @@ export default function Footer() {
                 <span className="font-heading font-bold text-lg text-background leading-tight">
                   Trip Mint
                 </span>
-                <span className="text-xs text-primary font-medium -mt-0.5">Travels</span>
+                <span className="text-xs text-primary font-medium -mt-0.5">Travel</span>
               </div>
             </a>
             <p className="text-background/70 text-sm mb-6 max-w-sm">
