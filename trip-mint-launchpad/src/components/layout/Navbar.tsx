@@ -41,7 +41,7 @@ export default function Navbar() {
             <span className="font-heading font-bold text-lg text-foreground leading-tight">
               Trip Mint
             </span>
-            <span className="text-xs text-primary font-medium -mt-0.5">Travels</span>
+            <span className="text-xs text-primary font-medium -mt-0.5">Travel</span>
           </div>
         </a>
 
