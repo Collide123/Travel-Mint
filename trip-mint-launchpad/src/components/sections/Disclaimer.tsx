@@ -14,7 +14,7 @@ export default function Disclaimer() {
             className="text-center mb-10"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-              About Us
+              Disclaimer
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
              Trip Mint Travel is an independent travel assistance service. We do not represent any airline, 
