@@ -2,7 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import AboutUs from "@/components/sections/AboutUs";
-import AboutUs from "@/components/sections/Disclaimer";
+import Disclaimer from "@/components/sections/Disclaimer";
 import Destinations from "@/components/sections/Destinations";
 import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/layout/Footer";

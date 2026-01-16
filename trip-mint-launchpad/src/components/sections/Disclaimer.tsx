@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function AboutUs() {
+export default function Disclaimer() {
   return (
     <section id="about" className="py-6 bg-muted/30">
       <div className="container mx-auto">
