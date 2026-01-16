@@ -1,4 +1,4 @@
-import { Plane, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Plane, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -8,12 +8,6 @@ const footerLinks = {
     { label: "Careers", href: "#" },
     { label: "Press", href: "#" },
     { label: "Blog", href: "#" },
-  ],
-  support: [
-    { label: "Help Center", href: "#" },
-    { label: "Contact Us", href: "#" },
-    { label: "FAQs", href: "#" },
-    { label: "Travel Guides", href: "#" },
   ],
   legal: [
     { label: "Terms of Service", href: "#" },
@@ -26,7 +20,7 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
@@ -75,20 +69,34 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Contact Us Column (Updated with your info) */}
           <div>
-            <h4 className="font-heading font-semibold text-background mb-4">Support</h4>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-primary text-sm transition-colors"
-                  >
-                    {link.label}
+            <h4 className="font-heading font-semibold text-background mb-4">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-primary shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-xs text-background/50 uppercase">Email</span>
+                  <a href="mailto:info@tripminttravel.com" className="text-background/70 hover:text-primary text-sm transition-colors">
+                    info@tripminttravel.com
                   </a>
-                </li>
-              ))}
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-primary shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-xs text-background/50 uppercase">Phone</span>
+                  <span className="text-background/70 text-sm italic">Support launching shortly</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="w-4 h-4 text-primary shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-xs text-background/50 uppercase">Support Hours</span>
+                  <span className="text-background/70 text-sm">08:00 AM - 08:00 PM</span>
+                  <span className="text-[10px] text-background/40">(Local Time)</span>
+                </div>
+              </li>
             </ul>
           </div>
 
